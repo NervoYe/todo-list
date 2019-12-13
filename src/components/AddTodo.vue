@@ -34,8 +34,10 @@ export default {
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 input {
   width: 400px;
+  margin: 20px;
 }
 </style>
