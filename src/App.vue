@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Welcome to my todo application</h1>
     <hr />
-    <TodoList :todos="todos" />
+    <TodoList :todos="todos" @remove-todo="removeTodo" />
   </div>
 </template>
 
@@ -22,6 +22,11 @@ export default {
   },
   components: {
     TodoList
+  },
+  methods: {
+    removeTodo(id) {
+      this.todos = this.todos.filter(t => t.id !== id);
+    }
   }
 };
 </script>
